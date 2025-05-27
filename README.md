@@ -1,7 +1,5 @@
 # geovim
 
-## Changes
-
 ### v0.0.2 - (May 27, 2025)
 
 * **Major Refactor: Modularization**
