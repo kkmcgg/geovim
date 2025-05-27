@@ -1,5 +1,10 @@
 # geovim
 
+## TODO
+
+- rebuild with vite/npm (choose typescript)
+- make application diagram (application -> config reader, input handler, window manager -> map, commands, actions)
+
 ### v0.0.2 - (May 27, 2025)
 
 * **Major Refactor: Modularization**
