@@ -10,7 +10,6 @@
 * **Configuration Management**:
   * Introduced `config.js` to centralize application settings like default zoom, pan speed, and home location.
 
-
 GeoVim is a web-based map application with Vim-like keyboard controls.
 
 Its all just mucking about for now.
