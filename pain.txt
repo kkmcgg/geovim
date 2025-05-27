@@ -1,0 +1,42 @@
+#kkmc
+#TLDR
+#in bash run:
+
+######
+
+google-chrome --app=file://$HOME/_dev/geovim/index.html
+
+hyprctl dispatch togglefloating address:$(hyprctl clients -j | jq -r '.[] | select(.title == "GeoVim Prototype") | .address')
+
+
+##########
+
+
+
+# tricks from local setup (hyerland)
+
+# kick off the html in chrome -app mode (to avoid url bar etc)
+
+google-chrome --app=file://$HOME/_dev/geovim/index.html
+
+## unfortunately mine was floating! couldnt seem to fix this resetting things in:
+vim ~/.config/hypr/UserConfigs/ WindowRules.conf 
+
+#i tried commenting out everything with float (no go) and settting a custom command in there
+
+#windowrulev2 = tile, workspace name:current, class:^(Google-chrome)$, title:^(GeoVim Prototype)$
+windowrulev2 = tile, title:^(GeoVim Prototype)$
+
+# which did not work
+# remember to reload hyprcrl:
+hyprctl reload
+
+# you can look at the list tiles/windows open
+hyprctl clients 
+
+# of find any named GeoVim
+hyprctl clients | grep GeoVim
+
+
+# and go nuts and find the window by name and toggle it to not-floating
+hyprctl dispatch togglefloating address:$(hyprctl clients -j | jq -r '.[] | select(.title == "GeoVim Prototype") | .address')
