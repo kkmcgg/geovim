@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Additive Blending - OpenLayers</title>
+    <script src="https://unpkg.com/elm-pep@1.0.6/dist/elm-pep.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.0.0/ol.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.0.0/dist/ol.js"></script>
+    <style>
+        html, body, #map {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Define the additive blending for our custom layer class */
+        .additive-blend-layer {
+            mix-blend-mode: multiply; /* Try 'screen' for a different brightening effect */
+        }
+
+        /* Optional: If the map container itself has a dark background,
+           additive blending often looks more pronounced. */
+        /*
+        #map {
+            background-color: #111;
+        }
+        */
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+
+    <script>
+        const xyzTileUrl = 'https://mesonet.agron.iastate.edu/cache/tile.py/1.0.0/goes-east-vis-1km/{z}/{x}/{y}.png';
+        // https://mesonet.agron.iastate.edu/ogc/
+        const map = new ol.Map({
+            target: 'map',
+            layers: [
+                // Base Layer (OpenStreetMap)
+                // The GOES layer will be additively blended onto this.
+                new ol.layer.Tile({
+                    source: new ol.source.OSM()
+                }),
+                // GOES East XYZ Tile Layer with Additive Blending
+                new ol.layer.Tile({
+                    className: 'additive-blend-layer', // Assign custom CSS class
+                    background: 'black', // You might remove or keep this depending on desired effect
+                    source: new ol.source.XYZ({
+                        url: xyzTileUrl,
+                        attributions: 'GOES Imagery courtesy of Iowa Environmental Mesonet, Iowa State University.',
+                        wrapX: true
+                    })
+                })
+            ],
+            view: new ol.View({
+                center: ol.proj.fromLonLat([-75, 20]),
+                zoom: 3,
+                projection: 'EPSG:3857'
+            })
+        });
+    </script>
+</body>
+</html>
