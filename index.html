@@ -7,39 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css">
     <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        /* Custom scrollbar for help panel (optional) */
-        #helpContent::-webkit-scrollbar {
-            width: 8px;
-        }
-        #helpContent::-webkit-scrollbar-track {
-            background: #2d3748; /* gray-800 */
-        }
-        #helpContent::-webkit-scrollbar-thumb {
-            background: #4a5568; /* gray-700 */
-            border-radius: 4px;
-        }
-        #helpContent::-webkit-scrollbar-thumb:hover {
-            background: #718096; /* gray-600 */
-        }
-        .ol-zoom {
-            display: none !important; /* Hide zoom controls */
-        }
-        .ol-attribution {
-            bottom: 2.75rem; /* Adjust if status bar height changes */
-        }
-        /* Ensure map tiles are not selectable to prevent blue flashing on click/drag */
-        #map .ol-layer canvas {
-            user-select: none;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-        }
-    </style>
-</head>
+    <link rel="stylesheet" href = "style.css">
+    </head>
 <body class="bg-gray-800 text-gray-100 flex flex-col h-screen overflow-hidden">
 
     <div id="appArea" class="flex-grow flex flex-col">
