@@ -1,23 +1,18 @@
 # geovim
 
-## TODO
-
-- rebuild with vite/npm (choose typescript)
-- make application diagram (application -> config reader, input handler, window manager -> map, commands, actions)
-
-### v0.0.2 - (May 27, 2025)
-
-* **Major Refactor: Modularization**
-  * Decomposed the original monolithic `script.js` into multiple JavaScript modules (including `main.js`, `interface.js`, `map.js`, `motions.js`, `actions.js`, `cmds.js`).
-  * This improves code organization and maintainability.
-* **Configuration Management**:
-  * Introduced `config.js` to centralize application settings like default zoom, pan speed, and home location.
-
 GeoVim is a web-based map application with Vim-like keyboard controls.
 
-Its all just mucking about for now.
+This is the (non working) svelte version
 
 Try it out: [https://kkmcgg.github.io/geovim](https://kkmcgg.github.io/geovim)
+
+## Build
+To build the project, run the following command:
+
+```bash
+npm run build
+npm run preview
+```
 
 ## Modes
 
