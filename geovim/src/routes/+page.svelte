@@ -1,6 +1,6 @@
 <script>
 	import '../app.css';
-	import App from '../../../src/routes/App.svelte';
+	import App from './App.svelte';
 </script>
 
 <App />

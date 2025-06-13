@@ -1,21 +1,13 @@
 <script>
   import { onMount } from 'svelte';
+  import Map from 'ol/Map.js';
+  import View from 'ol/View.js';
+  import TileLayer from 'ol/layer/Tile.js';
+  import OSM from 'ol/source/OSM.js';
 
   let mapEl;
 
-  onMount(async () => {
-    const [
-      { default: Map },
-      { default: View },
-      { default: TileLayer },
-      { default: OSM }
-    ] = await Promise.all([
-      import('https://cdn.jsdelivr.net/npm/ol/Map.js'),
-      import('https://cdn.jsdelivr.net/npm/ol/View.js'),
-      import('https://cdn.jsdelivr.net/npm/ol/layer/Tile.js'),
-      import('https://cdn.jsdelivr.net/npm/ol/source/OSM.js')
-    ]);
-
+  onMount(() => {
     const osmSource = new OSM();
     osmSource.setAttributions([]);
 
