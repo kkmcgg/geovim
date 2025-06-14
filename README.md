@@ -2,6 +2,8 @@
 
 GeoVim is a web-based map application with Vim-like keyboard controls.
 
+![alt text](./geovim/static/logo/logo.png)
+
 This is the (semi working) svelte version
 
 Try the main branch out: [https://kkmcgg.github.io/geovim](https://kkmcgg.github.io/geovim)
@@ -11,7 +13,8 @@ Initial prototype: [Svelte Playground](https://svelte.dev/playground/f5b6778a8de
 ## Known Issues
 
 * 'shift' is printed to console when using shift keys
-* Movement controls can be janky/unresponsive
+* Movement controls can be janky/unresponsivei
+* multiple gitignore files, package-lock.json sneaking through
 
 ## Build
 To build the project, run the following commands:
