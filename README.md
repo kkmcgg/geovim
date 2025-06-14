@@ -2,19 +2,17 @@
 
 GeoVim is a web-based map application with Vim-like keyboard controls.
 
+Try it out here: [https://kkmcgg.github.io/geovim](https://kkmcgg.github.io/geovim) *(from the main branch)*
+
 ![alt text](./geovim/static/logo/logo.png)
 
-This is the (semi working) svelte version
+Logo Design: [Figma Link](https://www.figma.com/design/9nUlqxmkAjEHpfeZKSjtNM/geovim?node-id=0-1&p=f) *(work in progress)*
 
-Try the main branch out: [https://kkmcgg.github.io/geovim](https://kkmcgg.github.io/geovim)
+---
 
-Initial prototype: [Svelte Playground](https://svelte.dev/playground/f5b6778a8de540feb953679727df713e?version=5.34.1) *(are these public?)*
+**This** is the (semi working) svelte version, probably soon to be the main branch
 
-## Known Issues
-
-* 'shift' is printed to console when using shift keys
-* Movement controls can be janky/unresponsivei
-* multiple gitignore files, package-lock.json sneaking through
+Based on an initial prototype: [Svelte Playground](https://svelte.dev/playground/f5b6778a8de540feb953679727df713e?version=5.34.1) *(are these public?)*
 
 ## Build
 To build the project, run the following commands:
@@ -23,6 +21,11 @@ To build the project, run the following commands:
 npm install
 npm run dev
 ```
+## Known Issues
+
+* 'shift' is printed to console when using shift keys
+* Movement controls can be janky/unresponsivei
+* multiple gitignore files, package-lock.json sneaking through
 
 ## Currently Implemented Features (This Branch)
 
