@@ -6,6 +6,8 @@ This is the (semi working) svelte version
 
 Try the main branch out: [https://kkmcgg.github.io/geovim](https://kkmcgg.github.io/geovim)
 
+Initial prototype: [Svelte Playground](https://svelte.dev/playground/f5b6778a8de540feb953679727df713e?version=5.34.1) *(are these public?)*
+
 ## Known Issues
 
 * 'shift' is printed to console when using shift keys
